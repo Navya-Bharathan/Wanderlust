@@ -1,3 +1,10 @@
+/*.featured-hotels-container, .top-destinations-container,.inspirations-container{
+    width:100%;
+    max-width: 1024px;
+    justify-content: space-between;
+    gap:20px;
+}
+*/
 .featured-hotels-container{
    
     margin:2rem;
@@ -14,11 +21,12 @@
 }
 .featured-hotel-card{
     /*border: 1px solid rgba(205, 199, 199, 0.939);*/
-    box-shadow: 5px 5px 18px;
+    box-shadow: 5px 5px 10px;
+    margin: 0 1rem;
 }
 .fh-Image{
-    width:250px;
-   padding: 1rem;
+    width:200px;
+   padding: 1rem ;
    
 }
 
@@ -54,7 +62,7 @@
 }
 
 .td-Image{
-    width:450px;
+    width:320px;
 }
 .td-name{
     align-self: center;
@@ -76,13 +84,13 @@
     flex-direction: column;
    
     margin: 1rem;
-    width:450px;
+    width:320px;
     align-items: center;
-    box-shadow: 2px 2px 10px;
+    box-shadow: 1px 1px 4px;
 }
 .ins-Image{
-    width:430px;
-    height: 300px;
+    width:315px;
+    height: 250px;
     margin-top: 1rem;
 }
 .ins-title{

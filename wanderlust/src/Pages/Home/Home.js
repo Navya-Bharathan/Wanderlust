@@ -5,13 +5,14 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRange } from 'react-date-range';
 import { format } from 'date-fns';
+import { useNavigate } from 'react-router-dom';
 
 //import {FeaturedHotels} from "../../Assets/Images/index.js"
 import {FeaturedHotelCard, InspirationsCard, TopDestinationsCard} from "../../Components/Cards/Cards"
 
 
 const Home = () => {
-
+  const [destination,setDestination]=useState("place");
   const [date, setDate] = useState([
     {
       startDate: new Date(),
@@ -35,13 +36,25 @@ const Home = () => {
       };
     });
   };
+
+  const navigate=useNavigate();
+  const handleSearch=()=>{
+       navigate("/hotellist" ,{state:{destination,date,people}} )
+       
+  }
   return (
+    <div className='home'>
     <div className='home-container'>
       <div className='home-search'>
         <div className='search-input-container'>
           <div className="search-input">
             <FaMapMarkerAlt/>
-            <input type="text" placeholder="Where are you going?" className='location-input'/>
+            <input type="text" 
+            placeholder="Where are you going?" 
+            className='location-input'
+            onChange={(e)=>setDestination(e.target.value)}  
+            />
+           
           </div>
           <div className="search-input">
             <FaRegCalendarAlt/>
@@ -91,7 +104,7 @@ const Home = () => {
 
             </div>}
           </div>
-          <button className='search-button'>Search</button>
+          <button className='search-button' onClick={handleSearch}>Search</button>
   </div> 
   </div>
   <div className='featured'>
@@ -106,18 +119,14 @@ const Home = () => {
           })
          }
         </div> */}
-        <div>
+        
           <FeaturedHotelCard/>
           <TopDestinationsCard />
           <InspirationsCard />
-        </div>
-    <div className='featured-places'>
+       
+    
 
-    </div>
-    <div className='featured-inspirations'>
-
-    </div>
-
+  </div>
   </div>
   </div>
   )
