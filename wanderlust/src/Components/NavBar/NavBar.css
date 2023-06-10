@@ -51,6 +51,7 @@ color: rgb(65, 225, 172);
     border-radius: 5px;
     color:white;
    font-size: 20px;
+   cursor: pointer;
     
 }
 .navbar-menu2 ul li button:hover{
