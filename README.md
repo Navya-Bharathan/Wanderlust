@@ -1,2 +1,2 @@
 # Wanderlust
-TRAVEL BOOKING WEBSITE
+Travel Accomodation and more..
